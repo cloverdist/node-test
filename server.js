@@ -20,14 +20,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.render('maintenance.hbs', {
-    url: req.url,
-    base: req.host,
-    ip: req.ip
-  });
-});
-
+// app.use((req, res, next) => {
+//   res.render('maintenance.hbs', {
+//     url: req.url,
+//     base: req.host,
+//     ip: req.ip
+//   });
+// });
 
 hbs.registerHelper('getYear', () => {
   return new Date().getFullYear();
